@@ -2,6 +2,7 @@ import { useCallback, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import List from './List'
+import Usememo from './Components/Usememo'
 
 
 function App() {
@@ -20,18 +21,21 @@ function App() {
     setnumber(parseInt((event.target.value)))
   })
   return (
-    <div className="App" style={theme}>
-      <input
-        type={"number"}
-        value={number}
-        onChange={change}
+    <div>
+      <span>Usecallback</span>
+      <div className="App" style={theme}>
+        <input
+          type={"number"}
+          value={number}
+          onChange={change}
 
-      />
-      <button onClick={(() => setdark(prevdark => !prevdark))}>
-        Toggle Theme
-        <List getItems={getItems} />
-      </button>
-
+        />
+        <button onClick={(() => setdark(prevdark => !prevdark))}>
+          Toggle Theme
+          <List getItems={getItems} />
+        </button>
+        <Usememo />
+      </div>
     </div>
   )
 }
