@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import List from './List'
 import Usememo from './Components/Usememo'
+import Useref from './Components/Useref'
 
 
 function App() {
@@ -35,7 +36,8 @@ function App() {
           <List getItems={getItems} />
         </button>
         <Usememo />
-      </div>
+      </div><br></br>
+      <Useref />
     </div>
   )
 }
