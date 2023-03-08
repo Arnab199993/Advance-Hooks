@@ -12,6 +12,7 @@ const Useref = () => {
     })
     const HandleInput = (() => {
         refElement.current.style.color = "blue"
+        refElement.current.value = "Dutta"
         // setcolor("blue")
     })
     return (
